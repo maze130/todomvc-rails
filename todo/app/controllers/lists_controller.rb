@@ -13,9 +13,10 @@ class ListsController < ApplicationController
     redirect_to lists_path
   end
 
-  def show
-    @list = List.find_by(id: params[:id])
-  end
+  # def show
+  #   #pass in all the tasks for the list
+  #   @list = List.find_by(id: params[:id])
+  # end
 
   def edit
     @list = List.find_by(id: params[:id])

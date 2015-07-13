@@ -1,0 +1,9 @@
+<h3><%=@list.name%></h3>
+
+<% @list.tasks.each do |task| %>
+  <%= "[#{task.completed ? X : ' '}] #{task.title}" %>
+  <br>
+<%end%>
+
+<br>
+<%= link_to 'Add Task', new_list_task_path(@list)%>
