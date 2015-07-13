@@ -1,0 +1,12 @@
+<h1>Welcome to ToDo</h1>
+<% @lists.each do |list| %>
+  <a href="<%= list_tasks_path(list.id) %>"><%= list.name %></a>
+  <br>
+  <a href="<%= edit_list_path(list.id) %>">Edit</a>
+  <%= link_to 'delete', list_path(list.id), method: :delete, data: { confirm: 'Are you sure?'} %>
+  <br>
+  <% end %>
+
+  <br>
+
+  <a href="/lists/new">Create New List</a>
