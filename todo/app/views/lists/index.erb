@@ -1,0 +1,9 @@
+<h1>Welcome to ToDo</h1>
+<% @lists.each do |list| %>
+  <a href="/lists/<%=list.id%>"><%= list.name %></a>
+  </br>
+  <a href="/lists/<%=list.id%>/edit">Edit</a>
+  <%= render partial: "delete", locals: {list: list}%>
+  <% end %>
+
+  <a href="/lists/new">Create New List</a>
